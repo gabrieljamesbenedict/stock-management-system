@@ -1,0 +1,11 @@
+com\gabriel\ecomms\controller\EcommerceController.class
+com\gabriel\ecomms\serviceimpl\ProductServiceImpl.class
+com\gabriel\ecomms\controller\ProductController.class
+com\gabriel\ecomms\serviceimpl\EcommerceServiceImpl.class
+com\gabriel\ecomms\controller\CategoryController.class
+com\gabriel\ecomms\serviceimpl\CategoryServiceImpl.class
+com\gabriel\ecomms\serviceimpl\InventoryServiceImpl.class
+com\gabriel\ecomms\controller\StatusController.class
+com\gabriel\ecomms\controller\InventoryController.class
+com\gabriel\ecomms\EcommerceMSApplication.class
+com\gabriel\ecomms\serviceimpl\StatusServiceImpl.class
