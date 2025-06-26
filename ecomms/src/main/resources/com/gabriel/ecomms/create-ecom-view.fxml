@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="500.0" spacing="5.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.ecomms.controller.CreateEcommerceController">
+<VBox alignment="CENTER" prefHeight="500.0" spacing="5.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.ecomms.controller.CreateStockController">
 	<padding>
 		<Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
 	</padding>

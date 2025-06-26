@@ -1,5 +1,5 @@
 package com.gabriel.ecomms.controller;
-import com.gabriel.ecomms.ManageEcommerceJFXApp;
+import com.gabriel.ecomms.StockManagementJFXApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -34,9 +34,9 @@ public class SplashViewController implements Initializable {
 		Window window = currentScene.getWindow();
 		window.hide();
 		if(manageScene == null){
-			FXMLLoader fxmlLoader = new FXMLLoader(ManageEcommerceJFXApp.class.getResource("manage-ecom-view.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(StockManagementJFXApp.class.getResource("manage-ecom-view.fxml"));
 			Parent root = (Parent)fxmlLoader.load();
-			ManageEcommerceController controller = fxmlLoader.getController();
+			ManageStockController controller = fxmlLoader.getController();
 			controller.setStage(stage);
 			manageScene = new Scene(root);
 			controller.setSplashScene(splashScene);
