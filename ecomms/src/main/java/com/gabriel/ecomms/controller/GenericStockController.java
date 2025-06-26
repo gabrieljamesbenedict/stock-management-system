@@ -34,9 +34,6 @@ public class GenericStockController implements Initializable{
 	CreateStockController createEcommerceController;
 
 	@Setter
-	DeleteStockController deleteEcommerceController ;
-
-	@Setter
 	EditStockController editEcommerceController;
 
 	@Setter

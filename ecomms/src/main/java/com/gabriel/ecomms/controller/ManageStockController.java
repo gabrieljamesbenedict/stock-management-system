@@ -26,9 +26,6 @@ public class ManageStockController extends GenericStockController {
 	@Setter
 	Scene editViewScene;
 
-	@Setter
-	Scene deleteViewScene;
-
 	public ImageView ecommerceImage;
 	@FXML
 	public Button btnCreate;
