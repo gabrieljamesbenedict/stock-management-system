@@ -2,4 +2,4 @@
 echo Running backend...
 dir
 cd ./sbecomms/
-mvn exec:java -X
+mvn exec:java

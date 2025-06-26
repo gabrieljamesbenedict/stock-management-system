@@ -1,6 +1,6 @@
 @echo off
 echo Running clean install...
-call mvn clean install -X
+call mvn clean install
 
 start runBackend.bat
 timeout /t 5
