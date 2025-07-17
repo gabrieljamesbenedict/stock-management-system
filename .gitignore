@@ -1,3 +1,1 @@
-/sbecomms/target
-/ecomms/target
-/ecomdata/target
+**/target/

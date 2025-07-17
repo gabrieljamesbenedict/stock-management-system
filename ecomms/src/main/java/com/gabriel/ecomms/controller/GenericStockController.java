@@ -49,7 +49,7 @@ public class GenericStockController implements Initializable{
 	Scene manageScene;
 
 	@Setter
-	public ListView<Stock> lvEcommerces;
+	public TableView<Stock> lvEcommerces;
 
 	@Setter
 	public static Stock selectedItem;

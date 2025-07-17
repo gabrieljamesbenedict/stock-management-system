@@ -2,18 +2,23 @@ package com.gabriel.ecomms.controller;
 import com.gabriel.ecomms.StockManagementJFXApp;
 import com.gabriel.ecomms.model.Stock;
 import com.gabriel.ecomms.service.StockService;
+import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.Scene;
 import javafx.scene.Node;
 import javafx.stage.Window;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import lombok.Setter;
 
 public class ManageStockController extends GenericStockController {
@@ -44,7 +49,9 @@ public class ManageStockController extends GenericStockController {
 	Stock selectedItem;
 
 	@FXML
-	private ListView<Stock> lvEcommerces;
+	private TableView<Stock> lvEcommerces;
+	private TableColumn<Stock, String> id, name, description, product, category, status, available, inventory, price;
+	final private TableColumn[] columns = {id, name, description, product, category, status, available, inventory, price};
 
 		public void refresh() {
 			Stock[] stocks = StockService.getService().getAll();
@@ -55,6 +62,25 @@ public class ManageStockController extends GenericStockController {
 
 	@Override
 	public void init() {
+		id = new TableColumn<>("ID");
+		name = new TableColumn<>("Name");
+		description = new TableColumn<>("Description");
+		product = new TableColumn<>("Product Type");
+		category = new TableColumn<>("Category");
+		status = new TableColumn<>("Status");
+		available = new TableColumn<>("Available Units");
+		inventory = new TableColumn<>("Inventory Loc");
+		price = new TableColumn<>("Price");
+		id.setCellValueFactory(s -> new ReadOnlyStringWrapper(Integer.toString(s.getValue().getId())));
+		name.setCellValueFactory(s -> new ReadOnlyStringWrapper(s.getValue().getName()));
+		description.setCellValueFactory(s -> new ReadOnlyStringWrapper(s.getValue().getDescription()));
+		product.setCellValueFactory(s -> new ReadOnlyStringWrapper(s.getValue().getProductName()));
+		category.setCellValueFactory(s -> new ReadOnlyStringWrapper(s.getValue().getCategoryName()));
+		status.setCellValueFactory(s -> new ReadOnlyStringWrapper(s.getValue().getStatusName()));
+		available.setCellValueFactory(s -> new ReadOnlyStringWrapper(Double.toString(s.getValue().getQuantityAvailable())));
+		inventory.setCellValueFactory(s -> new ReadOnlyStringWrapper(s.getValue().getInventoryName()));
+		price.setCellValueFactory(s -> new ReadOnlyStringWrapper(String.format("%.2f", s.getValue().getPrice())));
+		lvEcommerces.getColumns().addAll(id, name, description, product, category, status, available, inventory, price);
 		try {
 			refresh();
 		}
