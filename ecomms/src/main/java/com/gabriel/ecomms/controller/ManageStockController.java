@@ -3,6 +3,7 @@ import com.gabriel.ecomms.StockManagementJFXApp;
 import com.gabriel.ecomms.model.Stock;
 import com.gabriel.ecomms.service.StockService;
 import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -69,7 +70,7 @@ public class ManageStockController extends GenericStockController {
 		category = new TableColumn<>("Category");
 		status = new TableColumn<>("Status");
 		available = new TableColumn<>("Available Units");
-		inventory = new TableColumn<>("Inventory Loc");
+		inventory = new TableColumn<>("Inventory");
 		price = new TableColumn<>("Price");
 		id.setCellValueFactory(s -> new ReadOnlyStringWrapper(Integer.toString(s.getValue().getId())));
 		name.setCellValueFactory(s -> new ReadOnlyStringWrapper(s.getValue().getName()));
@@ -81,6 +82,7 @@ public class ManageStockController extends GenericStockController {
 		inventory.setCellValueFactory(s -> new ReadOnlyStringWrapper(s.getValue().getInventoryName()));
 		price.setCellValueFactory(s -> new ReadOnlyStringWrapper(String.format("%.2f", s.getValue().getPrice())));
 		lvEcommerces.getColumns().addAll(id, name, description, product, category, status, available, inventory, price);
+
 		try {
 			refresh();
 		}

@@ -13,144 +13,147 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.ecomms.controller.ManageStockController">
+<BorderPane prefHeight="617.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.ecomms.controller.ManageStockController">
    <right>
-      <VBox spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="TOP_CENTER">
          <children>
-            <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" spacing="10.0" VBox.vgrow="ALWAYS">
+            <HBox alignment="CENTER" fillHeight="false" nodeOrientation="RIGHT_TO_LEFT" spacing="10.0">
                <children>
-      					<Button fx:id="btnClose" mnemonicParsing="false" onAction="#onClose" prefWidth="70.0" text="Close" />
-      					<Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDelete" prefWidth="70.0" text="Delete" />
-      					<Button fx:id="btnEdit" mnemonicParsing="false" onAction="#onEdit" prefWidth="70.0" text="Edit" />
-      					<Button fx:id="btnCreate" mnemonicParsing="false" onAction="#onCreate" prefWidth="70.0" text="Create" />
+      					<Button fx:id="btnClose" mnemonicParsing="false" onAction="#onClose" prefHeight="50.0" prefWidth="70.0" text="Close" />
+      					<Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDelete" prefHeight="50.0" prefWidth="70.0" text="Delete" />
+      					<Button fx:id="btnEdit" mnemonicParsing="false" onAction="#onEdit" prefHeight="50.0" prefWidth="70.0" text="Edit" />
+      					<Button fx:id="btnCreate" mnemonicParsing="false" onAction="#onCreate" prefHeight="50.0" prefWidth="70.0" text="Create" />
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </HBox>
-         	<HBox alignment="CENTER_LEFT">
-         	<Label contentDisplay="CENTER" prefWidth="80.0" text="Id">
+         	<HBox alignment="TOP_CENTER" fillHeight="false">
+         	<Label contentDisplay="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Id">
          	<padding>
          	<Insets left="10.0" />
          	</padding>
          	</Label>
-         	<TextField fx:id="txtId" editable="false" prefWidth="200.0">
+         	<TextField fx:id="txtId" editable="false" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0">
          	<HBox.margin>
          	<Insets />
          	</HBox.margin>
          	</TextField>
-         	<padding>
-         	<Insets top="10.0" />
-         	</padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
          	</HBox>
-         	<HBox alignment="CENTER_LEFT">
-         		<Label contentDisplay="CENTER" prefWidth="80.0" text="Name">
+         	<HBox alignment="TOP_CENTER" fillHeight="false">
+         		<Label contentDisplay="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Name">
          			<padding>
          				<Insets left="10.0" />
          			</padding>
          		</Label>
-         		<TextField fx:id="txtName" editable="false" prefWidth="200.0" />
-         		<padding>
-         			<Insets top="10.0" />
-         		</padding>
+         		<TextField fx:id="txtName" editable="false" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
          	</HBox>
-         	<HBox alignment="CENTER_LEFT">
-         		<Label contentDisplay="CENTER" prefWidth="80.0" text="Description">
+         	<HBox alignment="TOP_CENTER" fillHeight="false">
+         		<Label contentDisplay="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Description">
          			<padding>
          				<Insets left="10.0" />
          			</padding>
          		</Label>
-         		<TextField fx:id="txtDescription" editable="false" prefWidth="200.0" />
-         		<padding>
-         			<Insets top="10.0" />
-         		</padding>
+         		<TextField fx:id="txtDescription" editable="false" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
          	</HBox>
-         	<HBox alignment="CENTER_LEFT">
-         		<Label contentDisplay="CENTER" prefWidth="80.0" text="Product">
+         	<HBox alignment="TOP_CENTER" fillHeight="false">
+         		<Label contentDisplay="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Product">
          			<padding>
          				<Insets left="10.0" />
          			</padding>
          		</Label>
-         		<StackPane prefHeight="150.0" prefWidth="200.0">
+         		<StackPane maxHeight="50.0" prefHeight="50.0" prefWidth="200.0">
          			<children>
-         				<ComboBox fx:id="cmbProduct" prefWidth="200.0" />
-         				<TextField fx:id="txtProductName" editable="false" prefWidth="150.0" />
+         				<ComboBox fx:id="cmbProduct" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
+         				<TextField fx:id="txtProductName" editable="false" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
          			</children>
          		</StackPane>
-         		<padding>
-         			<Insets top="10.0" />
-         		</padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
          	</HBox>
-         	<HBox alignment="CENTER_LEFT">
-         		<Label contentDisplay="CENTER" prefWidth="80.0" text="Category">
+         	<HBox alignment="TOP_CENTER" fillHeight="false">
+         		<Label contentDisplay="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Category">
          			<padding>
          				<Insets left="10.0" />
          			</padding>
          		</Label>
-         		<StackPane prefHeight="150.0" prefWidth="200.0">
+         		<StackPane maxHeight="50.0" prefHeight="50.0" prefWidth="200.0">
          			<children>
-         				<ComboBox fx:id="cmbCategory" prefWidth="200.0" />
-         				<TextField fx:id="txtCategoryName" editable="false" prefWidth="150.0" />
+         				<ComboBox fx:id="cmbCategory" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
+         				<TextField fx:id="txtCategoryName" editable="false" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
          			</children>
          		</StackPane>
-         		<padding>
-         			<Insets top="10.0" />
-         		</padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
          	</HBox>
-         	<HBox alignment="CENTER_LEFT">
-         		<Label contentDisplay="CENTER" prefWidth="80.0" text="Status">
+         	<HBox alignment="TOP_CENTER" fillHeight="false">
+         		<Label contentDisplay="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Status">
          			<padding>
          				<Insets left="10.0" />
          			</padding>
          		</Label>
-         		<StackPane prefHeight="150.0" prefWidth="200.0">
+         		<StackPane maxHeight="50.0" prefHeight="50.0" prefWidth="200.0">
          			<children>
-         				<ComboBox fx:id="cmbStatus" prefWidth="200.0" />
-         				<TextField fx:id="txtStatusName" editable="false" prefWidth="150.0" />
+         				<ComboBox fx:id="cmbStatus" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
+         				<TextField fx:id="txtStatusName" editable="false" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
          			</children>
          		</StackPane>
-         		<padding>
-         			<Insets top="10.0" />
-         		</padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
          	</HBox>
-         	<HBox alignment="CENTER_LEFT">
-         		<Label contentDisplay="CENTER" prefWidth="80.0" text="Available">
+         	<HBox alignment="TOP_CENTER" fillHeight="false">
+         		<Label contentDisplay="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Available">
          			<padding>
          				<Insets left="10.0" />
          			</padding>
          		</Label>
-         		<TextField fx:id="txtQuantityAvailable" editable="false" prefWidth="200.0" />
-         		<padding>
-         			<Insets top="10.0" />
-         		</padding>
+         		<TextField fx:id="txtQuantityAvailable" editable="false" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
          	</HBox>
-         	<HBox alignment="CENTER_LEFT">
-         		<Label contentDisplay="CENTER" prefWidth="80.0" text="Inventory">
+         	<HBox alignment="TOP_CENTER" fillHeight="false">
+         		<Label contentDisplay="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Inventory">
          			<padding>
          				<Insets left="10.0" />
          			</padding>
          		</Label>
-         		<StackPane prefHeight="150.0" prefWidth="200.0">
+         		<StackPane maxHeight="50.0" prefHeight="50.0" prefWidth="200.0">
          			<children>
-         				<ComboBox fx:id="cmbInventory" prefWidth="200.0" />
-         				<TextField fx:id="txtInventoryName" editable="false" prefWidth="150.0" />
+         				<ComboBox fx:id="cmbInventory" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
+         				<TextField fx:id="txtInventoryName" editable="false" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
          			</children>
          		</StackPane>
-         		<padding>
-         			<Insets top="10.0" />
-         		</padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
          	</HBox>
-         	<HBox alignment="CENTER_LEFT">
-         		<Label contentDisplay="CENTER" prefWidth="80.0" text="Price">
+         	<HBox alignment="TOP_CENTER" fillHeight="false">
+         		<Label contentDisplay="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Price">
          			<padding>
          				<Insets left="10.0" />
          			</padding>
          		</Label>
-         		<TextField fx:id="txtPrice" editable="false" prefWidth="200.0" />
-         		<padding>
-         			<Insets top="10.0" />
-         		</padding>
+         		<TextField fx:id="txtPrice" editable="false" maxHeight="50.0" prefHeight="50.0" prefWidth="200.0" />
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
          	</HBox>
          </children>
          <BorderPane.margin>
-            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            <Insets bottom="15.0" right="15.0" top="15.0" />
          </BorderPane.margin>
       </VBox>
    </right>
@@ -169,7 +172,7 @@
       </AnchorPane>
    </top>
    <center>
-      <TableView fx:id="lvEcommerces" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="lvEcommerces" onMouseClicked="#onAction" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
          </BorderPane.margin>

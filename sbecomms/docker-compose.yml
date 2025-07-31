@@ -1,36 +1,35 @@
 version: "3.8"
 services:
-  empldbsrvr:
+  ecomdbmsrvr:
     image: mysql:8.0
     container_name: mysql1
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: empldb
+      MYSQL_DATABASE: ecomdbm
       MYSQL_USER: mysqluser
       MYSQL_PASSWORD: password
-    ports:
-      - "3306:3306"
-      - "33060:33060"
     volumes:
       - ./db:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
-      - emplnetwork
+      - ecomnetwork
 
   springboot-app:
-    image: empl
-    container_name: sbemplsrvr
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sms_backend
+    container_name: sms_backend_cont
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://empldbsrvr:3306/empldb
+      SPRING_DATASOURCE_URL: jdbc:mysql://ecomdbmsrvr:3306/ecomdbm
       SPRING_DATASOURCE_USERNAME: mysqluser
       SPRING_DATASOURCE_PASSWORD: password
     ports:
       - "8080:8080"
     depends_on:
-      - empldbsrvr
+      - ecomdbmsrvr
     networks:
-      - emplnetwork
+      - ecomnetwork
 
 networks:
-  emplnetwork:
+  ecomnetwork:
     driver: bridge
