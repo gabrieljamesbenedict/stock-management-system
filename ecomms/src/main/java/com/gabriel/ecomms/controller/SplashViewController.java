@@ -44,6 +44,7 @@ public class SplashViewController implements Initializable {
 		}
 		stage.setTitle("Stock Management");
 		stage.setScene(manageScene);
+		stage.setResizable(true);
 		stage.show();
 	}
 }
