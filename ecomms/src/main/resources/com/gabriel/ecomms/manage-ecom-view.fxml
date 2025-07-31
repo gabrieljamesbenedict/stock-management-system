@@ -158,7 +158,7 @@
       </VBox>
    </right>
    <top>
-      <AnchorPane prefHeight="70.0" style="-fx-background-color: #e6a800;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="70.0" style="-fx-background-color: #0D4F73;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="34.0" layoutY="27.0" text="STOCK MANAGEMENT SYSTEM" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>

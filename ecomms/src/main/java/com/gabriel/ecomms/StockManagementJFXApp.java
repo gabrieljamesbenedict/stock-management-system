@@ -15,10 +15,11 @@ public class StockManagementJFXApp extends Application {
 		Parent root = (Parent)fxmlLoader.load();
 		SplashViewController splashViewController= fxmlLoader.getController();
 		splashViewController.setStage(stage);
-		Scene scene = new Scene(root, 420, 420);
+		Scene scene = new Scene(root);
 		splashViewController.setSplashScene(scene);
-		stage.setTitle("Ecommerce Management!");
+		stage.setTitle("Stock Management!");
 		stage.setScene(scene);
+		stage.setResizable(false);
 		stage.show();
 	}
 }
